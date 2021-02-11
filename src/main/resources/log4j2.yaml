@@ -1,0 +1,13 @@
+Configuration:
+  appenders:
+    Console:
+      name: LogToConsole
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} [%t] %level %c - %msg%n"
+  Loggers:
+    logger:
+      - name: com.sye
+        level: debug
+        additivity: false
+        AppenderRef:
+          - ref: LogToConsole
